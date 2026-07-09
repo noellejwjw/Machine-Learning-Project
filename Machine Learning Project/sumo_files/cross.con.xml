@@ -1,0 +1,23 @@
+<connections>
+    <!-- lane 1 = left, lane 2 = straight, lane 3 = right -->
+
+    <!-- From North -->
+    <connection from="N2C" to="C2E" fromLane="1" toLane="1"/>  <!-- left -->
+    <connection from="N2C" to="C2S" fromLane="2" toLane="2"/>  <!-- straight -->
+    <connection from="N2C" to="C2W" fromLane="3" toLane="3"/>  <!-- right -->
+
+    <!-- From South -->
+    <connection from="S2C" to="C2W" fromLane="1" toLane="1"/>  <!-- left -->
+    <connection from="S2C" to="C2N" fromLane="2" toLane="2"/>  <!-- straight -->
+    <connection from="S2C" to="C2E" fromLane="3" toLane="3"/>  <!-- right -->
+
+    <!-- From East -->
+    <connection from="E2C" to="C2S" fromLane="1" toLane="1"/>  <!-- left -->
+    <connection from="E2C" to="C2W" fromLane="2" toLane="2"/>  <!-- straight -->
+    <connection from="E2C" to="C2N" fromLane="3" toLane="3"/>  <!-- right -->
+
+    <!-- From West -->
+    <connection from="W2C" to="C2N" fromLane="1" toLane="1"/>  <!-- left -->
+    <connection from="W2C" to="C2E" fromLane="2" toLane="2"/>  <!-- straight -->
+    <connection from="W2C" to="C2S" fromLane="3" toLane="3"/>  <!-- right -->
+</connections>

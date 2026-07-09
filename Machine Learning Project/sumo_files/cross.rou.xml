@@ -1,0 +1,104 @@
+<routes>
+    <vType id="sedan"
+        vClass="passenger"
+        guiShape="passenger/sedan"
+        color="random"
+        length="4.5"
+        width="1.8"
+        maxSpeed="13.89"/>
+
+    <vType id="van"
+        vClass="passenger"
+        guiShape="passenger/van"
+        color="random"
+        length="5.5"
+        width="2.1"
+        maxSpeed="12.0"/>
+
+    <vType id="lorry"
+        vClass="truck"
+        guiShape="truck"
+        color="random"
+        length="8.0"
+        width="2.5"
+        maxSpeed="10.0"/>
+            
+    <!-- Routes -->
+    <route id="north_left"     edges="N2C C2E"/>
+    <route id="north_straight" edges="N2C C2S"/>
+    <route id="north_right"    edges="N2C C2W"/>
+
+    <route id="south_left"     edges="S2C C2W"/>
+    <route id="south_straight" edges="S2C C2N"/>
+    <route id="south_right"    edges="S2C C2E"/>
+
+    <route id="east_left"      edges="E2C C2S"/>
+    <route id="east_straight"  edges="E2C C2W"/>
+    <route id="east_right"     edges="E2C C2N"/>
+
+    <route id="west_left"      edges="W2C C2N"/>
+    <route id="west_straight"  edges="W2C C2E"/>
+    <route id="west_right"     edges="W2C C2S"/>
+
+    <!-- Vehicle flows -->
+    <!-- lane 1 = left, lane 2 = straight, lane 3 = right -->
+
+    <flow id="f_n_left_sedan" type="sedan" route="north_left" begin="0" end="1200" probability="0.04" departLane="1"/>
+    <flow id="f_n_left_van"   type="van"   route="north_left" begin="0" end="1200" probability="0.02" departLane="1"/>
+    <flow id="f_n_left_lorry" type="lorry" route="north_left" begin="0" end="1200" probability="0.01" departLane="1"/>
+    <flow id="f_n_straight_sedan" type="sedan" route="north_straight" begin="0" end="1200" probability="0.04" departLane="2"/>
+    <flow id="f_n_straight_van"   type="van"   route="north_straight" begin="0" end="1200" probability="0.02" departLane="2"/>
+    <flow id="f_n_straight_lorry" type="lorry" route="north_straight" begin="0" end="1200" probability="0.01" departLane="2"/>
+    <flow id="f_n_right_sedan" type="sedan" route="north_right" begin="0" end="1200" probability="0.03" departLane="3"/>
+    <flow id="f_n_right_van"   type="van"   route="north_right" begin="0" end="1200" probability="0.02" departLane="3"/>
+    <flow id="f_n_right_lorry" type="lorry" route="north_right" begin="0" end="1200" probability="0.01" departLane="3"/>
+
+    
+    <flow id="f_s_left_sedan" type="sedan" route="south_left" begin="0" end="1200" probability="0.04" departLane="1"/>
+    <flow id="f_s_left_van"   type="van"   route="south_left" begin="0" end="1200" probability="0.02" departLane="1"/>
+    <flow id="f_s_left_lorry" type="lorry" route="south_left" begin="0" end="1200" probability="0.01" departLane="1"/>
+    <flow id="f_s_straight_sedan" type="sedan" route="south_straight" begin="0" end="1200" probability="0.04" departLane="2"/>
+    <flow id="f_s_straight_van"   type="van"   route="south_straight" begin="0" end="1200" probability="0.02" departLane="2"/>
+    <flow id="f_s_straight_lorry" type="lorry" route="south_straight" begin="0" end="1200" probability="0.01" departLane="2"/>
+    <flow id="f_s_right_sedan" type="sedan" route="south_right" begin="0" end="1200" probability="0.03" departLane="3"/>
+    <flow id="f_s_right_van"   type="van"   route="south_right" begin="0" end="1200" probability="0.02" departLane="3"/>
+    <flow id="f_s_right_lorry" type="lorry" route="south_right" begin="0" end="1200" probability="0.01" departLane="3"/>
+
+    <flow id="f_e_left_sedan" type="sedan" route="east_left" begin="0" end="1200" probability="0.04" departLane="1"/>
+    <flow id="f_e_left_van"   type="van"   route="east_left" begin="0" end="1200" probability="0.02" departLane="1"/>
+    <flow id="f_e_left_lorry" type="lorry" route="east_left" begin="0" end="1200" probability="0.01" departLane="1"/>
+    <flow id="f_e_straight_sedan" type="sedan" route="east_straight" begin="0" end="1200" probability="0.04" departLane="2"/>
+    <flow id="f_e_straight_van"   type="van"   route="east_straight" begin="0" end="1200" probability="0.02" departLane="2"/>
+    <flow id="f_e_straight_lorry" type="lorry" route="east_straight" begin="0" end="1200" probability="0.01" departLane="2"/>
+    <flow id="f_e_right_sedan" type="sedan" route="east_right" begin="0" end="1200" probability="0.03" departLane="3"/>
+    <flow id="f_e_right_van"   type="van"   route="east_right" begin="0" end="1200" probability="0.02" departLane="3"/>
+    <flow id="f_e_right_lorry" type="lorry" route="east_right" begin="0" end="1200" probability="0.01" departLane="3"/>
+
+    <flow id="f_w_left_sedan" type="sedan" route="west_left" begin="0" end="1200" probability="0.04" departLane="1"/>
+    <flow id="f_w_left_van"   type="van"   route="west_left" begin="0" end="1200" probability="0.02" departLane="1"/>
+    <flow id="f_w_left_lorry" type="lorry" route="west_left" begin="0" end="1200" probability="0.01" departLane="1"/>
+    <flow id="f_w_straight_sedan" type="sedan" route="west_straight" begin="0" end="1200" probability="0.04" departLane="2"/>
+    <flow id="f_w_straight_van"   type="van"   route="west_straight" begin="0" end="1200" probability="0.02" departLane="2"/>
+    <flow id="f_w_straight_lorry" type="lorry" route="west_straight" begin="0" end="1200" probability="0.01" departLane="2"/>
+    <flow id="f_w_right_sedan" type="sedan" route="west_right" begin="0" end="1200" probability="0.03" departLane="3"/>
+    <flow id="f_w_right_van"   type="van"   route="west_right" begin="0" end="1200" probability="0.02" departLane="3"/>
+    <flow id="f_w_right_lorry" type="lorry" route="west_right" begin="0" end="1200" probability="0.01" departLane="3"/>
+
+ 
+    <!-- Pedestrians -->
+    <personFlow id="ped_w_to_e" begin="0" end="1200" probability="0.03">
+        <walk from="W2C" to="E2C"/>
+    </personFlow>
+
+    <personFlow id="ped_e_to_w" begin="0" end="1200" probability="0.03">
+        <walk from="E2C" to="W2C"/>
+    </personFlow>
+
+    <personFlow id="ped_n_to_s" begin="0" end="1200" probability="0.03">
+        <walk from="N2C" to="S2C"/>
+    </personFlow>
+
+    <personFlow id="ped_s_to_n" begin="0" end="1200" probability="0.03">
+        <walk from="S2C" to="N2C"/>
+    </personFlow>
+</routes>
