@@ -38,7 +38,7 @@ The goal is to improve traffic efficiency while giving appropriate consideration
 - Pedestrian waiting-time monitoring
 - Vehicle queue and waiting-time monitoring
 - Reinforcement learning model training and evaluation
-- Comparison of DQN, A2C, PPO, and QR-DQN
+- Comparison of DQN, A2C, PPO and QR-DQN
 - Training reward and learning stability visualization
 - Hyperparameter evaluation for QR-DQN
 - GUI-based simulation testing
@@ -61,7 +61,7 @@ PPO is a policy-based reinforcement learning algorithm designed to provide stabl
 
 QR-DQN is a distributional reinforcement learning algorithm that models the distribution of future returns rather than predicting only a single expected value.
 
-In this project, QR-DQN demonstrated strong overall performance in balancing pedestrian waiting time, vehicle waiting time, and traffic control success.
+In this project, QR-DQN demonstrated strong overall performance in balancing pedestrian waiting time, vehicle waiting time and traffic control success.
 
 ## Technologies Used
 
